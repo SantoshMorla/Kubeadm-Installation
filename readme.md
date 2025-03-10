@@ -169,7 +169,6 @@ Also, make sure all the pods are up and running by using the command as below:
 >If your Calico-node pods are not healthy, please perform the below steps:
 
 - Disabled source/destination checks for master and worker nodes too.
-- Configure Security group rules, Bidirectional, all hosts,TCP 179(Attach it to master and worker nodes)
 - Update the ds using the command:
 `kubectl set env daemonset/calico-node -n calico-system IP_AUTODETECTION_METHOD=interface=ens5`
 Where ens5 is your default interface, you can confirm by running `ifconfig` on all the machines
